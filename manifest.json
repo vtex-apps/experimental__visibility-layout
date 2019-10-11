@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "visibility-layout",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "Experimental Visibility Layout",
   "builders": {
     "messages": "1.x",
