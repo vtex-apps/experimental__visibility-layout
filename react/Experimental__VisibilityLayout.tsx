@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 const Experimental__VisibilityLayout: StorefrontFunctionComponent<VisibilityLayoutProps> = ({
-  visible,
+  visible = true,
   children
 }) => {
   if (visible === false) {
