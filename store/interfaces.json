@@ -1,5 +1,16 @@
 {
-  "base-store-component": {
-    "component": "Example"
+  "experimental__visibility-layout": {
+    "allowed": "*",
+    "composition": "children",
+    "component": "Experimental__VisibilityLayout",
+    "content": {
+      "properties": {
+        "visible": {
+          "title": "admin/editor.visibilityLayout.visible.title",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
   }
 }
