@@ -1,11 +1,29 @@
 import React from 'react'
 import { render } from '@vtex/test-tools/react'
-import Component from '../components/index'
+import VisibilityLayout from '../Experimental__VisibilityLayout'
 
-describe('HelloWorld Component', () => {
-  const { getByText } = render(<Component />)
+describe('VisibilityLayout', () => {
+  it('should show children if visible is true', () => {
+    const { queryByText } = render(
+      <VisibilityLayout visible={true}>
+        Foo
+      </VisibilityLayout>
+    )
 
-  it('should render the example in TypeScript', () => {
-    expect(getByText(/This is an example/)).toBeDefined()
+    const children = queryByText(/Foo/)
+
+    expect(children).toBeTruthy()
+  })
+
+  it('should not show children if visible is false', () => {
+    const { queryByText } = render(
+      <VisibilityLayout visible={false}>
+        Foo
+      </VisibilityLayout>
+    )
+
+    const children = queryByText(/Foo/)
+
+    expect(children).toBeFalsy()
   })
 })
